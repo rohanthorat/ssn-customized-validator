@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormsModule, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public ssn = new FormControl('');
+  public myGroup =  new FormGroup({
+     ssn: new FormControl('')
+  });
 }

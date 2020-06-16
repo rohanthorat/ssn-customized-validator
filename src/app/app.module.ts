@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 import { SparkAngularModule } from '@sparkdesignsystem/spark-angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SparkAngularModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

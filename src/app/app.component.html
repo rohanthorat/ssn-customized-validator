@@ -25,11 +25,14 @@
         inputmode="numeric"
         type="text"
         value=""
-        aria-describedby="text-input--error-container">
+        [maxlength]="11"
+        aria-describedby="text-input--error-container"
+        (keypress)="formattingInputSSN($event)"
+        (paste)="addingHyphen($event)">
 
       <div
         class="sprk-b-ErrorContainer"
-        id="ssn--error-container">
+        id="ssn--error-container" *ngIf="getSSN().invalid && (getSSN().dirty || getSSN().touched) && getSSN().value">
           <svg
             class="sprk-c-Icon sprk-c-Icon--m sprk-b-ErrorIcon"
             viewBox="0 0 64 64">
